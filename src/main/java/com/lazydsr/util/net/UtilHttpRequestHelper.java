@@ -38,7 +38,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送get请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数map<String,Object> String:参数名，Object:参数值
+     * @param requestParams 参数 String:参数名，Object:参数值
      * @return 返回结果
      */
     public static String sendHttpGet(String requestUrl, Map<String, Object> requestParams) {
@@ -49,7 +49,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送get请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数map<String,Object> String:参数名，Object:参数值
+     * @param requestParams 参数 String:参数名，Object:参数值
      * @param charset       字符集
      * @return 返回结果
      */
@@ -107,7 +107,7 @@ public class UtilHttpRequestHelper {
      * 默认使用UTF-8进行编码
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数map<String,Object> String:参数名，Object:参数值
+     * @param requestParams 参数 String:参数名，Object:参数值
      * @return 返回结果
      */
     public static String sendHttpPost(String requestUrl, Map<String, Object> requestParams) {
@@ -118,7 +118,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送post请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数map<String,Object> String:参数名，Object:参数值
+     * @param requestParams 参数 String:参数名，Object:参数值
      * @param charset       字符集
      * @return 返回结果
      */
@@ -307,7 +307,7 @@ public class UtilHttpRequestHelper {
      * 发送get请求保存下载文件
      *
      * @param requestUrl          请求地址
-     * @param requestParams       参数map<String,Object> String:参数名，Object:参数值
+     * @param requestParams       参数 String:参数名，Object:参数值
      * @param fileSavePathAndName 文件保存地址+文件名  因为无法确定url或者是header中是否包含文件名，所以此处默认输入路径加文件名+文件后缀
      */
     public static void sendHttpGetAndSaveFile(String requestUrl, Map<String, Object> requestParams, String fileSavePathAndName) {
@@ -459,9 +459,11 @@ public class UtilHttpRequestHelper {
 //
 
     /**
-     * @Description:使用socket发送post请求
-     * @author:liuyc
-     * @time:2016年5月18日 上午9:26:22
+     * 使用socket发送post请求
+     * @param urlParam
+     * @param params
+     * @param charset
+     * @return
      */
     public static String sendSocketPost(String urlParam, Map<String, Object> params, String charset) {
         String result = "";
@@ -558,9 +560,11 @@ public class UtilHttpRequestHelper {
     }
 
     /**
-     * @Description:使用socket发送get请求
-     * @author:liuyc
-     * @time:2016年5月18日 上午9:27:18
+     * 使用socket发送get请求
+     * @param urlParam
+     * @param params
+     * @param charset
+     * @return
      */
     public static String sendSocketGet(String urlParam, Map<String, Object> params, String charset) {
         String result = "";
@@ -659,8 +663,8 @@ public class UtilHttpRequestHelper {
     /**
      * @Description:读取一行数据，contentLe内容长度为0时，读取响应头信息，不为0时读正文
      * @time:2016年5月17日 下午6:11:07
-     */
-    /**
+     *
+     *
      * 读取一行数据，contentLe内容长度为0时，读取响应头信息，不为0时读正文
      *
      * @param is            InputStream

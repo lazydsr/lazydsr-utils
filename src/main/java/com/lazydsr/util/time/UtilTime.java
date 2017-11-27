@@ -9,7 +9,7 @@ import java.util.Date;
  * 时间工具类
  * Coding......
  * Created by D.SR on 2017/3/10.
- * @info:升级为UtilDateTime
+ * Info:升级为@Link:UtilDateTime.class
  */
 @Deprecated
 public class UtilTime {
