@@ -29,22 +29,22 @@
         <url>git@github.com:lazydsr/lazydsr-utils.git</url>
     </scm>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>nexus-releases</id>-->
-            <!--<name>Team Nexus Repository</name>-->
-            <!--&lt;!&ndash;<url>http://172.25.1.245:8081/repository/maven-public</url>&ndash;&gt;-->
-            <!--<url>http://oaappdl.founder.com/nexus/repository/maven-public</url>-->
-        <!--</repository>-->
-    <!--</repositories>-->
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>nexus-snapshots</id>-->
-            <!--<name>Team Nexus Repository</name>-->
-            <!--&lt;!&ndash;<url>http://172.25.1.245:8081/repository/maven-snapshots/</url>&ndash;&gt;-->
-            <!--<url>http://oaappdl.founder.com/nexus/repository/maven-snapshots/</url>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
+    <repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Team Nexus Repository</name>
+            <!--<url>http://172.25.1.245:8081/repository/maven-public</url>-->
+            <url>http://oaappdl.founder.com/nexus/repository/maven-public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus-snapshots</id>
+            <name>Team Nexus Repository</name>
+            <!--<url>http://172.25.1.245:8081/repository/maven-snapshots/</url>-->
+            <url>http://oaappdl.founder.com/nexus/repository/maven-snapshots/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <distributionManagement>
         <!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致-->
         <repository>
