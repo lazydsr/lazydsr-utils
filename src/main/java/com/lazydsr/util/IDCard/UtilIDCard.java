@@ -14,7 +14,8 @@ import java.util.regex.Pattern;
  * Created by Lazy on 2017/5/13 20:16
  * Version: 0.1
  * Info: 身份证号码工具类，获取身份证的相关信息
- * 本类中除了verifyIDCard外，其他方法均默认为身份证号码为正确的
+ * 本类中除了verifyIDCard外，其他方法均默认为身份证号码为正确的，
+ * 所以使用其他方法前建议先使用verifyIDCard进行正确性的验证
  */
 
 public class UtilIDCard {
@@ -69,7 +70,6 @@ public class UtilIDCard {
         if (IDCard.length() == 15)
             IDCard = IDCard15To18(IDCard);
 
-        //String reg="^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$";
         String reg = "^[1-9]\\d{5}(19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$";
         if (!Pattern.matches(reg, IDCard))
             return false;
@@ -82,9 +82,6 @@ public class UtilIDCard {
         int _year = Integer.parseInt(IDCard.substring(6, 10));
         int _month = Integer.parseInt(IDCard.substring(10, 12));
         int _day = Integer.parseInt(IDCard.substring(12, 14));
-        //int _curYear = Integer.parseInt(UtilTime.getCurrYear());
-        //int _curMonth = Integer.parseInt(UtilTime.getCurrMonth());
-        //int _curDay = Integer.parseInt(UtilTime.getCurrDay());
         if (UtilDateTime.getDateByStr("" + _year + "-" + _month + "-" + _day).after(new Date()) || _year < 1900)
             return false;
         switch (_month) {

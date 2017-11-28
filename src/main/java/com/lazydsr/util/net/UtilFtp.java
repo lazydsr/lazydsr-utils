@@ -92,7 +92,7 @@ public class UtilFtp {
      * @param remotePath FTP服务器上的相对路径
      * @param fileName   要下载的文件名
      * @param localPath  下载后保存到本地的路径
-     * @return
+     * @return 成功返回true，否则返回false
      */
     public static boolean downloadFile(String host, int port, String username, String password, String remotePath,
                                        String fileName, String localPath) {

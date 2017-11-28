@@ -11,13 +11,10 @@ import java.util.Map;
  * PACKAGE_NAME: com.lazy.com.lazydsr.util.id
  * Created by Lazy on 2017/6/30 23:10
  * Version: 0.1
- * Info: @TODO:...
+ * Info: 32位大写主键生成器
  */
 public class UtilUUId {
-    /*
-     * The random number generator used by this class to create random
-     * based UUIDs.
-     */
+
     private static volatile SecureRandom numberGenerator = null;
 
     public final static int UUIDLENGTH = 26;
@@ -29,19 +26,20 @@ public class UtilUUId {
             '2', '3', '4', '5', '6', '7', '8', '9'
     };
 
-    //    public static byte[] randomBytes() {
-//        SecureRandom ng = numberGenerator;
-//        if (ng == null) {
-//            numberGenerator = ng = new SecureRandom();
-//        }
-//        byte[] randomBytes = new byte[16];
-//        ng.nextBytes(randomBytes);
-//        return randomBytes;
-//    }
+    /**
+     * 获取32位大写主键
+     *
+     * @return 32位大写主键
+     */
     public static String getId() {
         return randomUUID();
     }
 
+    /**
+     * 32位大写主键生成器
+     *
+     * @return 32位大写主键
+     */
     public static String randomUUID() {
         SecureRandom ng = numberGenerator;
         if (ng == null) {
@@ -70,26 +68,5 @@ public class UtilUUId {
             s[index++] = DIGITS[(int) ((lsb >>> i) & 0x1f)];
         }
         return new String(s);
-    }
-
-
-    public void test() {
-        Map<String, String> map = null;
-        for (int i = 0; i < 1000000000; i++) {
-            System.out.print("第" + i + "次");
-            map = new HashMap<String, String>();
-            for (int j = 0; j < 1000000; j++) {
-//            System.out.println(randomUUID());
-                map.put(randomUUID(), null);
-            }
-            if (map.size() != 1000000) {
-                System.out.println("异常" + map.size());
-                break;
-            } else {
-                System.out.println("   正常");
-            }
-            map = null;
-        }
-
     }
 }

@@ -3,6 +3,7 @@ package com.lazydsr.util.mail;
 /**
  * Coding......
  * Created by D.SR on 2017/1/22.
+ * Info:暂未启用
  */
 public class MailSenderFactory {
     private static UtilMail utilMail;

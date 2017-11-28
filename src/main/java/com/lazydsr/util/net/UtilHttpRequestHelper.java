@@ -23,7 +23,6 @@ public class UtilHttpRequestHelper {
     private static String CHARSET_UTF_8 = "UTF-8";
 
 
-
     /**
      * 使用HttpURLConnection发送get请求
      *
@@ -38,7 +37,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送get请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数 String:参数名，Object:参数值
+     * @param requestParams 参数map String:参数名，Object:参数值
      * @return 返回结果
      */
     public static String sendHttpGet(String requestUrl, Map<String, Object> requestParams) {
@@ -49,7 +48,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送get请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数 String:参数名，Object:参数值
+     * @param requestParams 参数map String:参数名，Object:参数值
      * @param charset       字符集
      * @return 返回结果
      */
@@ -107,7 +106,7 @@ public class UtilHttpRequestHelper {
      * 默认使用UTF-8进行编码
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数 String:参数名，Object:参数值
+     * @param requestParams 参数map String:参数名，Object:参数值
      * @return 返回结果
      */
     public static String sendHttpPost(String requestUrl, Map<String, Object> requestParams) {
@@ -118,7 +117,7 @@ public class UtilHttpRequestHelper {
      * 使用HttpURLConnection发送post请求
      *
      * @param requestUrl    请求地址
-     * @param requestParams 参数 String:参数名，Object:参数值
+     * @param requestParams 参数map String:参数名，Object:参数值
      * @param charset       字符集
      * @return 返回结果
      */
@@ -307,7 +306,7 @@ public class UtilHttpRequestHelper {
      * 发送get请求保存下载文件
      *
      * @param requestUrl          请求地址
-     * @param requestParams       参数 String:参数名，Object:参数值
+     * @param requestParams       参数map String:参数名，Object:参数值
      * @param fileSavePathAndName 文件保存地址+文件名  因为无法确定url或者是header中是否包含文件名，所以此处默认输入路径加文件名+文件后缀
      */
     public static void sendHttpGetAndSaveFile(String requestUrl, Map<String, Object> requestParams, String fileSavePathAndName) {
@@ -361,11 +360,11 @@ public class UtilHttpRequestHelper {
         }
     }
 
-    /**
-     * @Description:使用HttpClient发送post请求
-     * @author:liuyc
-     * @time:2016年5月17日 下午3:28:23
-     */
+    ///**
+    // * @Description:使用HttpClient发送post请求
+    // * @author:liuyc
+    // * @time:2016年5月17日 下午3:28:23
+    // */
 //    public static String httpClientPost(String urlParam, Map<String, Object> params, String charset) {
 //        StringBuffer resultBuffer = null;
 //        HttpClient client = new DefaultHttpClient();
@@ -406,11 +405,11 @@ public class UtilHttpRequestHelper {
 //        return resultBuffer.toString();
 //    }
 //
-    /**
-     * @Description:使用HttpClient发送get请求
-     * @author:liuyc
-     * @time:2016年5月17日 下午3:28:56
-     */
+//    /**
+//     * @Description:使用HttpClient发送get请求
+//     * @author:liuyc
+//     * @time:2016年5月17日 下午3:28:56
+//     */
 //    public static String httpClientGet(String urlParam, Map<String, Object> params, String charset) {
 //        StringBuffer resultBuffer = null;
 //        HttpClient client = new DefaultHttpClient();
@@ -459,11 +458,17 @@ public class UtilHttpRequestHelper {
 //
 
     /**
+     * @Description:使用socket发送post请求
+     * @author:liuyc
+     * @time:2016年5月18日 上午9:26:22
+     */
+    /**
      * 使用socket发送post请求
-     * @param urlParam
-     * @param params
-     * @param charset
-     * @return
+     *
+     * @param urlParam 地址url
+     * @param params   参数
+     * @param charset  字符编码
+     * @return 结果
      */
     public static String sendSocketPost(String urlParam, Map<String, Object> params, String charset) {
         String result = "";
@@ -561,10 +566,11 @@ public class UtilHttpRequestHelper {
 
     /**
      * 使用socket发送get请求
-     * @param urlParam
-     * @param params
-     * @param charset
-     * @return
+     *
+     * @param urlParam 地址url
+     * @param params   参数
+     * @param charset  字符集
+     * @return 返回结果
      */
     public static String sendSocketGet(String urlParam, Map<String, Object> params, String charset) {
         String result = "";
@@ -660,11 +666,8 @@ public class UtilHttpRequestHelper {
         return result;
     }
 
+
     /**
-     * @Description:读取一行数据，contentLe内容长度为0时，读取响应头信息，不为0时读正文
-     * @time:2016年5月17日 下午6:11:07
-     *
-     *
      * 读取一行数据，contentLe内容长度为0时，读取响应头信息，不为0时读正文
      *
      * @param is            InputStream

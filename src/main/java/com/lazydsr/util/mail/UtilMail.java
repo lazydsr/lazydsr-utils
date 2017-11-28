@@ -13,11 +13,13 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Coding......
- * Created by D.SR on 2017/1/22.
+ * UtilMail
+ * PROJECT_NAME: lazy
+ * PACKAGE_NAME: com.lazy.com.lazydsr.util.UtilMail
+ * Created by Lazy on 2017/5/13 20:16
+ * Version: 0.1
+ * Info: mail工具类
  */
-
-
 public class UtilMail {
     private String host = "";
     private String username = "";
@@ -44,8 +46,8 @@ public class UtilMail {
     /**
      * 有参构造
      *
-     * @param host     类似jtmail.founder.com
-     * @param username 用户名  类似founderoa，不需要加@jtmail.founder.com
+     * @param host     类似xxx.xxx.com
+     * @param username 用户名  类似xxx，不需要加@xxx.xxx.com
      * @param password 密码
      */
     public UtilMail(String host, String username, String password) {
@@ -59,8 +61,8 @@ public class UtilMail {
     /**
      * 有参构造
      *
-     * @param host     类似jtmail.founder.com
-     * @param username 用户名  类似founderoa，不需要加@jtmail.founder.com
+     * @param host     类似xxx.xxx.com
+     * @param username 用户名  类似xxx，不需要加@xxx.xxx.com
      * @param password 密码
      * @param isTLS    是否启用TLS
      */
@@ -89,7 +91,7 @@ public class UtilMail {
     }
 
     /**
-     * 邮件发送——单个接收人
+     * 邮件发送----单个接收人
      *
      * @param recipient 接收人
      * @param subject   主题
@@ -104,7 +106,7 @@ public class UtilMail {
     }
 
     /**
-     * 邮件发送——多个接收人
+     * 邮件发送----多个接收人
      *
      * @param recipients 接收人
      * @param subject    主题
@@ -117,7 +119,7 @@ public class UtilMail {
     }
 
     /**
-     * 邮件发送——单个接收人和一个抄送人
+     * 邮件发送----单个接收人和一个抄送人
      *
      * @param recipient 接收人
      * @param CCUser    抄送人
@@ -135,7 +137,7 @@ public class UtilMail {
     }
 
     /**
-     * 邮件发送——单个接收人、一个抄送人和一个密送人
+     * 邮件发送----单个接收人、一个抄送人和一个密送人
      *
      * @param recipient 接收人
      * @param CCUser    抄送人
@@ -156,7 +158,7 @@ public class UtilMail {
     }
 
     /**
-     * 邮件发送——多个接收人——自定义发件人显示名称
+     * 邮件发送----多个接收人----自定义发件人显示名称
      *
      * @param recipients 接收人
      * @param CCUsers    抄送人

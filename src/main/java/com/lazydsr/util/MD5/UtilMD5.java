@@ -3,9 +3,12 @@ package com.lazydsr.util.MD5;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /**
- * MD5工具类
- * Coding......
- * Created by D.SR on 2017/3/7.
+ * UtilMD5
+ * PROJECT_NAME: lazy
+ * PACKAGE_NAME: com.lazy.com.lazydsr.util.UtilMD5
+ * Created by Lazy on 2017/5/13 20:16
+ * Version: 0.1
+ * Info: MD5工具类
  */
 public class UtilMD5 {
     /**

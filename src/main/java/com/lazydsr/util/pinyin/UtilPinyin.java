@@ -40,6 +40,7 @@ public class UtilPinyin {
     /**
      * 获取中文字符串的小写首字母
      *
+     * @param sourceStr 中文字符串
      * @return 首字母String
      */
     public static String getFirstLetter(String sourceStr) {
@@ -60,6 +61,9 @@ public class UtilPinyin {
 
     /**
      * 输入字符,得到他的声母,英文字母返回对应的小写字母,其他非简体汉字返回 '0'
+     *
+     * @param ch 字符串
+     * @return 结果
      */
     private static char Char2Initial(char ch) {
         // 对英文字母的处理：小写字母转换为大写，大写的直接返回
@@ -90,7 +94,10 @@ public class UtilPinyin {
     }
 
     /**
-     * 取出汉字的编码 cn 汉字
+     * 取出汉字的编码
+     *
+     * @param ch 汉字
+     * @return 结果
      */
     private static int gbValue(char ch) {// 将一个汉字（GB2312）转换为十进制表示。
         String str = new String();

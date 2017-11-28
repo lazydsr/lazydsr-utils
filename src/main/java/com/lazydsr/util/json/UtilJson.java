@@ -7,11 +7,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 /**
- * 淘淘商城自定义响应结构
+ * UtilJson
+ * PROJECT_NAME: lazy
+ * PACKAGE_NAME: com.lazy.com.lazydsr.util.UtilJson
+ * Created by Lazy on 2017/5/13 20:16
+ * Version: 0.1
+ * Info: json常用工具类
  */
 public class UtilJson {
 
-    // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     /**
@@ -19,8 +23,8 @@ public class UtilJson {
      * <p>Title: pojoToJson</p>
      * <p>Description: </p>
      *
-     * @param data
-     * @return
+     * @param data json对象
+     * @return json字符串
      */
     public static String objectToJson(Object data) {
         try {
@@ -35,9 +39,9 @@ public class UtilJson {
     /**
      * 将json结果集转化为对象
      *
-     * @param jsonData json数据
+     * @param jsonData json字符串
      * @param beanType 对象中的object类型
-     * @return
+     * @return pojo对象
      */
     public static <T> T jsonToPojo(String jsonData, Class<T> beanType) {
         try {
@@ -54,9 +58,9 @@ public class UtilJson {
      * <p>Title: jsonToList</p>
      * <p>Description: </p>
      *
-     * @param jsonData
-     * @param beanType
-     * @return
+     * @param jsonData json字符串
+     * @param beanType pojo对象类型
+     * @return pojo的list集合
      */
     public static <T> List<T> jsonToList(String jsonData, Class<T> beanType) {
         JavaType javaType = MAPPER.getTypeFactory().constructParametricType(List.class, beanType);
