@@ -6,7 +6,7 @@
 
     <groupId>com.lazydsr</groupId>
     <artifactId>lazydsr-utils</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 
     <name>lazydsr-utils</name>
     <description>lazydsr-utils.</description>
@@ -29,44 +29,21 @@
         <developerConnection>scm:git:git@github.com:lazydsr/lazydsr-utils.git</developerConnection>
         <url>git@github.com:lazydsr/lazydsr-utils.git</url>
     </scm>
-
-    <repositories>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Team Nexus Repository</name>
-            <!--<url>http://172.25.1.245:8081/repository/maven-public</url>-->
-            <url>http://oaappdl.founder.com/nexus/repository/maven-public</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus-snapshots</id>
-            <name>Team Nexus Repository</name>
-            <!--<url>http://172.25.1.245:8081/repository/maven-snapshots/</url>-->
-            <url>http://oaappdl.founder.com/nexus/repository/maven-snapshots/</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--发布jar到中央仓库-->
     <distributionManagement>
-        <!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致-->
         <repository>
             <id>oos-releases</id>
             <name>Nexus Release Repository</name>
-            <!--<url>http://172.25.1.245:8081/repository/maven-public/</url>-->
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <snapshotRepository>
             <id>oos-snapshots</id>
             <name>Nexus Snapshot Repository</name>
-            <!--<url>http://172.25.1.245:8081/repository/maven-snapshots/</url>-->
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <properties>
-        <lazydsr.version>${project.version}</lazydsr.version>
-        <lazydsr-base.version>${project.version}</lazydsr-base.version>
-        <lazydsr-commons.version>${project.version}</lazydsr-commons.version>
-        <lazydsr-utils.version>${project.version}</lazydsr-utils.version>
         <junit.version>4.12</junit.version>
         <jackson.version>2.8.10</jackson.version>
         <javax.activation.version>1.1.1</javax.activation.version>
