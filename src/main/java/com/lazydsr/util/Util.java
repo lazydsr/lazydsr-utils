@@ -9,4 +9,6 @@ package com.lazydsr.util;
  * Info: @TODO:...
  */
 public class Util {
+    public static final String UTF_8 = "UTF-8";
+    public static final String GBK = "GBK";
 }
