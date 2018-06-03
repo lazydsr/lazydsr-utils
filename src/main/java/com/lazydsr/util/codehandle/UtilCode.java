@@ -54,7 +54,6 @@ public class UtilCode {
         try {
             res = new sun.misc.BASE64Encoder().encode(code.getBytes(format));
         } catch (UnsupportedEncodingException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return res;
