@@ -19,6 +19,7 @@ public class UtilDateTime {
     public static String DATE_FORMATE = "yyyy-MM-dd";
     public static String TIME_FORMATE = "HH-mm-ss";
     public static String DATE_TIME_FORMATE = "yyyy-MM-dd HH:mm:ss";
+    public static String DATE_TIME_MILLISECOND_FORMATE = "yyyy-MM-dd HH:mm:ss.SSS";
 
     /**
      * 判断是否为闰年
@@ -211,6 +212,14 @@ public class UtilDateTime {
     }
 
 
+    /**
+     * 获取当前日期和时间
+     *
+     * @return 日期时间字符串
+     */
+    public static String getCurrDateTimeMillisecond() {
+        return getCurrDateTime(DATE_TIME_MILLISECOND_FORMATE);
+    }
     /**
      * 获取当前日期和时间
      *
