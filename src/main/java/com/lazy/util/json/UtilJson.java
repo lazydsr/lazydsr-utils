@@ -1,4 +1,4 @@
-package com.lazydsr.util.json;
+package com.lazy.util.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;

@@ -1,6 +1,6 @@
-package com.lazydsr.util.codehandle;
+package com.lazy.util.codehandle;
 
-import com.lazydsr.util.Util;
+import com.lazy.util.Util;
 import sun.misc.BASE64Decoder;
 
 import java.io.UnsupportedEncodingException;

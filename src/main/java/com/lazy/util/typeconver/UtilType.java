@@ -1,4 +1,4 @@
-package com.lazydsr.util.typeconver;
+package com.lazy.util.typeconver;
 
 /**
  * Coding......

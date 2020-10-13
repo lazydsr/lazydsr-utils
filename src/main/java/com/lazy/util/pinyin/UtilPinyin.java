@@ -1,4 +1,4 @@
-package com.lazydsr.util.pinyin;
+package com.lazy.util.pinyin;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

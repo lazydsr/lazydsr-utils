@@ -1,6 +1,6 @@
-package com.lazydsr.util.IDCard;
+package com.lazy.util.IDCard;
 
-import com.lazydsr.util.time.UtilDateTime;
+import com.lazy.util.time.UtilDateTime;
 
 import java.util.Date;
 import java.util.HashMap;

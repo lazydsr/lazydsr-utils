@@ -1,4 +1,4 @@
-package com.lazydsr.util.net;
+package com.lazy.util.net;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;

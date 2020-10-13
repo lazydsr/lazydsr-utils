@@ -1,4 +1,4 @@
-package com.lazydsr.util.net;
+package com.lazy.util.net;
 
 import java.io.*;
 import java.net.HttpURLConnection;

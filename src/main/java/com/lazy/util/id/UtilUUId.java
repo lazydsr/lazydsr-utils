@@ -1,4 +1,4 @@
-package com.lazydsr.util.id;
+package com.lazy.util.id;
 
 
 import java.security.SecureRandom;

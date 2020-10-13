@@ -1,4 +1,4 @@
-package com.lazydsr.util.time;
+package com.lazy.util.time;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

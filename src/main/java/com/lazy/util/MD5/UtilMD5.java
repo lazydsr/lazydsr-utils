@@ -1,4 +1,4 @@
-package com.lazydsr.util.MD5;
+package com.lazy.util.MD5;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

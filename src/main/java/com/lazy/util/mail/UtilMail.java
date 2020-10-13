@@ -1,4 +1,4 @@
-package com.lazydsr.util.mail;
+package com.lazy.util.mail;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;

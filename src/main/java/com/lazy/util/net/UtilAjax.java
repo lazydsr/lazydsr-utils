@@ -1,4 +1,4 @@
-package com.lazydsr.util.net;
+package com.lazy.util.net;
 
 import javax.servlet.http.HttpServletRequest;
 

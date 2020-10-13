@@ -1,4 +1,4 @@
-package com.lazydsr.util;
+package com.lazy.util;
 
 /**
  * Util

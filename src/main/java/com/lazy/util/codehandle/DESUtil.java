@@ -1,4 +1,4 @@
-package com.lazydsr.util.codehandle;
+package com.lazy.util.codehandle;
 
 /**
  * DESUtil
